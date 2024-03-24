@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="description" content="银河编程社区是一个搭载在线版图形化少儿编程以及Python的平台。你可以在这里创作作品，也可以与大家交流。">
+    <meta name="keywords" content="银河,银河编程,银河社区,银河编程社区,scratch在线编程,scratch平台,共创世界,CCW,Scratch,西瓜编程,西瓜社区,编程社区,西瓜创客,少儿编程,儿童编程 Scratch中文社区,Scratch中国,scratch官网,A营,阿尔法营,aerfaying,稽木世界,积木世界,编程猫社区,学而思编程,网易有道卡搭,小码王,核桃编程,迷你编程,动画,Scratch云变量,Scratch云列表,Scratch物理引擎,Scratch物理碰撞,scratch物理仿真,Scratch联机,Turbo warp,Scratch游戏制作,Scratch游戏代码, Scratch游戏制作,Scratch游戏教程,Scratch游戏案例,Scratch作品教程,scratch作业,scratch素材,信息课作业,游戏,小说,创意,创客,教程,小学信息技术,编程,机器人,可视化编程,图形化编程,GameJam,STEAM,Python,HTML,Turtle,Pygame,乐高,独立游戏,游戏制作,动画制作,创造力,逻辑思维,小游戏,跑酷">
+    <style>
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            z-index: 9999999999;
+        }
+        
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+    <title>银河编程社区</title>
+</head>
+<body style="background-image: url(/背景.svg);background-size: cover;background-repeat: no-repeat;background-attachment: fixed;">
+    <div id="overlay"></div>
+    <script>
+        var overlay = document.getElementById("overlay");
+
+        var text = document.createElement("div");
+        text.classList.add("text");
+        text.innerHTML = "<h1>网站维护中...</h1><br>你先别急，坐和放宽，很快就好。";
+
+        text.style.position = "absolute";
+        text.style.top = "50%";
+        text.style.left = "50%";
+        text.style.transform = "translate(-50%, -50%)";
+        text.style.color = "#fff";
+        text.style.textAlign = "center";
+
+        overlay.appendChild(text);
+
+        function checkWidth() {
+            if (window.innerWidth < 114514191981000) {
+                overlay.style.display = "block";
+            } else {
+                overlay.style.display = "none";
+            }
+        }
+
+        window.addEventListener("load", checkWidth);
+        window.addEventListener("resize", checkWidth);
+    </script>
+</body>
+</html>
